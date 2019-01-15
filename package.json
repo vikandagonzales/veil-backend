@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/vikandagonzales/veil-backend/issues"
   },
-  "homepage": "https://github.com/vikandagonzales/veil-backend#readme"
+  "homepage": "https://github.com/vikandagonzales/veil-backend#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }
