@@ -1,18 +1,22 @@
 {
   "name": "veil-backend",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "description": "Back-end for https://github.com/vikandagonzales/veil",
+  "main": "./src/app.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vikandagonzales/veil-backend.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "javascript",
+    "nodejs",
+    "expressjs",
+    "knexjs",
+    "sql",
+    "postgresql"
+  ],
+  "author": "Vikanda Gonzales <vikanda.gonzales@gmail.com>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/vikandagonzales/veil-backend/issues"
   },
@@ -26,5 +30,12 @@
     "morgan": "^1.9.1",
     "nodemon": "^1.18.9",
     "pg": "^7.8.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/app.js",
+    "dev": "nodemon ./src/app.js",
+    "knex": "knex",
+    "reboot": "knex migrate:rollback && knex migrate:latest && knex seed:run"
   }
 }
