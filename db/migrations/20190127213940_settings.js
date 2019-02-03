@@ -1,8 +1,13 @@
+const TABLE_NAME = 'settings';
 
-exports.up = function(knex, Promise) {
-  
+exports.up = (knex, Promise) => {
+  return knex.schema.createTable(TABLE_NAME, table => {
+    table.increments();
+    table.string('name').notNullable();
+    table.string('status').notNullable();
+  });
 };
 
-exports.down = function(knex, Promise) {
-  
+exports.down = (knex, Promise) => {
+  return knex.schema.dropTableIfExists(TABLE_NAME);
 };
