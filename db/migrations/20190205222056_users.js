@@ -6,6 +6,7 @@ exports.up = (knex, Promise) => {
     table.integer('role_id').notNullable().references('roles.id');
     table.string('name').notNullable();
     table.timestamp('birthday').notNullable();
+    table.string('timezone').notNullable();
     table.timestamp('created_at').defaultTo(knex.fn.now());
   });
 };
