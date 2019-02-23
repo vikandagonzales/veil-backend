@@ -9,6 +9,7 @@ exports.up = (knex, Promise) => {
     table.string('location').notNullable();
     table.string('timezone').notNullable();
     table.text('bio').notNullable();
+    table.string('photo').notNullable();
     table.timestamp('created_at').defaultTo(knex.fn.now());
   });
 };
