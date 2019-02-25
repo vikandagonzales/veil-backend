@@ -6,8 +6,8 @@ exports.up = (knex, Promise) => {
     table.integer('role_id').notNullable().references('roles.id');
     table.string('name').notNullable();
     table.timestamp('birthday').notNullable();
-    table.string('location').notNullable();
-    table.string('timezone').notNullable();
+    table.string('location').defaultsTo('');
+    table.string('timezone').defaultsTo('');
     table.text('bio').defaultsTo('');
     table.string('photo').defaultsTo('');
     table.boolean('archived').defaultsTo(false);
