@@ -5,6 +5,7 @@ exports.up = (knex, Promise) => {
     table.increments();
     table.integer('role_id').notNullable().references('roles.id');
     table.string('email').notNullable();
+    table.string('password').notNullable();
     table.string('name').notNullable();
     table.timestamp('birthday').notNullable();
     table.string('location').defaultsTo('');
