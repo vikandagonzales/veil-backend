@@ -6,7 +6,7 @@ exports.up = (knex, Promise) => {
     table.integer('role_id').notNullable().references('roles.id');
     table.string('email').notNullable();
     table.string('password').notNullable();
-    table.string('name').notNullable();
+    table.string('username').notNullable();
     table.timestamp('birthday').notNullable();
     table.string('location').defaultsTo('');
     table.string('timezone').defaultsTo('');
