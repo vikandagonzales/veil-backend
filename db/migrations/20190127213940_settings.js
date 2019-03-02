@@ -5,6 +5,7 @@ exports.up = (knex, Promise) => {
     table.increments();
     table.string('name').notNullable();
     table.string('status').notNullable();
+    table.timestamp('founded').notNullable();
   });
 };
 
