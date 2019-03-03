@@ -6,6 +6,7 @@ exports.up = (knex, Promise) => {
     table.string('name').notNullable();
     table.string('status').notNullable();
     table.timestamp('founded').notNullable();
+    table.boolean('archived').defaultsTo(false);
   });
 };
 
