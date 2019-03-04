@@ -1,4 +1,4 @@
-const TABLE_NAME = 'settings';
+const TABLE_NAME = 'guilds';
 
 exports.up = (knex, Promise) => {
   return knex.schema.createTable(TABLE_NAME, table => {
