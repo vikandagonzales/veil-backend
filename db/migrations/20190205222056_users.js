@@ -3,6 +3,7 @@ const TABLE_NAME = 'users';
 exports.up = (knex, Promise) => {
   return knex.schema.createTable(TABLE_NAME, table => {
     table.increments();
+    table.integer('guild_id').notNullable().references('guilds.id');
     table.integer('role_id').notNullable().references('roles.id');
     table.string('email').notNullable();
     table.string('password').notNullable();
