@@ -5,6 +5,7 @@ exports.up = (knex, Promise) => {
     table.increments();
     table.integer('guild_id').notNullable().references('guilds.id');
     table.string('name').notNullable();
+    table.integer('rank').notNullable();
   });
 };
 
