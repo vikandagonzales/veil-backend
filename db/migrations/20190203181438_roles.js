@@ -2,10 +2,10 @@ const TABLE_NAME = 'roles';
 
 exports.up = (knex, Promise) => {
   return knex.schema.createTable(TABLE_NAME, table => {
-    table.increments();
+    table.increments().unique();
     table.integer('guild_id').notNullable().references('guilds.id');
-    table.string('name').notNullable();
-    table.integer('rank').notNullable();
+    table.string('name').notNullable().unique();
+    table.integer('rank').notNullable().unique();
   });
 };
 
